@@ -11,10 +11,10 @@ import types
 from pelican import signals
 
 def initialized(pelican):
-    from pelican.settings import DEFAULT_CONFIG
-    DEFAULT_CONFIG.setdefault('SUMMARY_BEGIN_MARKER',
+    from pelican.settings import _DEFAULT_CONFIG
+    _DEFAULT_CONFIG.setdefault('SUMMARY_BEGIN_MARKER',
                               '<!-- PELICAN_BEGIN_SUMMARY -->')
-    DEFAULT_CONFIG.setdefault('SUMMARY_END_MARKER',
+    _DEFAULT_CONFIG.setdefault('SUMMARY_END_MARKER',
                               '<!-- PELICAN_END_SUMMARY -->')
     if pelican:
         pelican.settings.setdefault('SUMMARY_BEGIN_MARKER',
